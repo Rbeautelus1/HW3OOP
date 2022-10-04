@@ -8,13 +8,46 @@ class Subway {
     Subway() {
       passengers = 0;
       total_fares = 0;
+      int CalculateFares(int p){
+        return GetPassengers + total_fares
+      }
+      double Board(int p) {
+      if(b >= 0)
+      cout << b;
+      return passengers + total_fares;
     }
+    int Disembark(int d)
+    if
+    };
+
+
+    Subway::CalculateFares();
+  Subway:: Disembark();
+  
     
-  private:
+      
+     double GetPassengers()
+    {return passengers;}
+
+    double GetFares()
+    {return total_fares;}
+
+    Subway::Board();
+  
+
+private:
     const double fare = 2.40; //variable cannot be reassigned
     int passengers;
     double total_fares;
+    
 };
+
+ 
+
+
+
+
+
 
 //add class definitions above this line   
 
