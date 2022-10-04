@@ -1,20 +1,44 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 //add class definitions below this line
 
-class Mass {
-  public:
-    Mass(double mg, double g, double kg) {
-      milligrams = mg;
-      grams = g;
-      kilograms = kg;
-    }
-  
+class Mass 
+{
   private:
     double milligrams;
     double grams;
     double kilograms;
+
+public:
+  Mass(double mg, double g, double kg) {
+      milligrams = mg;
+      grams = g;
+      kilograms = kg;
+  }
+
+  double TotalWeight(){
+    double t = kilograms + grams/1000 + (double)milligrams / 1000000;
+    return t;
+  }
+ // string CompareWeight()
+
+
+
+
+//string Mass::CompareWeight()
+string CompareWeight(Mass m)
+{
+  if(TotalWeight() > m.TotalWeight())
+    cout << "First object is heavier";
+  
+  else if(TotalWeight() < m.TotalWeight())
+  cout << "Second object is heavier";
+
+  else
+  cout << "The object weight is the same";
+}
 };
 
 //add class definitions above this line   
