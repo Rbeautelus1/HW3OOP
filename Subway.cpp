@@ -5,52 +5,63 @@ using namespace std;
 
 class Subway {
   public:
-    Subway() {
+    Subway(){
       passengers = 0;
       total_fares = 0;
-      int CalculateFares(int p){
-        return GetPassengers + total_fares
-      }
-      double Board(int p) {
-      if(b >= 0)
-      cout << b;
-      return passengers + total_fares;
     }
-    int Disembark(int d)
-    if
-    };
+    int GetPassengers();
+    void Board(int);
+    void Disembark(int);
+    double GetFares();
 
-
-    Subway::CalculateFares();
-  Subway:: Disembark();
-  
-    
-      
-     double GetPassengers()
-    {return passengers;}
-
-    double GetFares()
-    {return total_fares;}
-
-    Subway::Board();
-  
-
-private:
+    private:
     const double fare = 2.40; //variable cannot be reassigned
     int passengers;
     double total_fares;
     
 };
 
- 
+int Subway::GetPassengers()
+{
+  return passengers;
+}
 
+double CalculateFares(int p, double fare)
+  {
+    return fare * p;
+  }
 
+void Subway::Board(int p)
+{
+  if(p>=0)
+  {
+    passengers+=p;
+  }
+  cout << "Boarded passengers entered: " << passengers << endl;
+  total_fares = CalculateFares(p,fare);
+  
+  }
+  
+  void Subway::Disembark(int p)
+  {
+    if(p<0)
+    {
+      cout << "Wrong number of passengers exiting " << endl;
+    }
+    else {
+      passengers -= p; 
+    }
+    cout << "Disembark passengers exited: " << passengers << endl;
+  }
 
+  double Subway::GetFares()
+  {
+    return total_fares;
+  }
 
 
 
 //add class definitions above this line   
-
 int main() {
   
   //DO NOT EDIT code below this line
@@ -58,7 +69,7 @@ int main() {
   Subway s;
   cout << s.GetPassengers() << endl;
   s.Board(23);
-  s.Disembark(12);
+ s.Disembark(12);
   cout << s.GetPassengers() << endl;
   cout << s.GetFares() << endl;
 
@@ -67,3 +78,4 @@ int main() {
   return 0;
   
 }
+
